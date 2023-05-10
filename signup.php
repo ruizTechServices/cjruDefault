@@ -25,7 +25,9 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$hashed_password', '$email')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New user created successfully. <a href='login.html'>Log in</a>";
+    echo "
+    New user created successfully. <a href='login.html'>Log in</a>
+    ";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
